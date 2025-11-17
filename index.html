@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Flashcards</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f5f5f5;
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    header {
+      padding: 12px 16px;
+      text-align: center;
+      background: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    header p {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      margin-top: 4px;
+    }
+
+    .frame-wrapper {
+      flex: 1;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      padding: 8px;
+    }
+
+    .frame-inner {
+      width: 100%;
+      max-width: 900px;
+      height: calc(100vh - 72px); /* full height minus header */
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      background: #000;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1rem;
+      }
+      .frame-inner {
+        border-radius: 0;
+        box-shadow: none;
+        height: calc(100vh - 72px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Flashcards</h1>
+    <p>Swipe, zoom and tap to explore the cards</p>
+  </header>
+
+  <div class="frame-wrapper">
+    <div class="frame-inner">
+      <!-- 🔽 Replace ONLY the URL below with your Miro EMBED URL -->
+      <iframe
+        src="<iframe width="768" height="496" src="https://miro.com/app/live-embed/uXjVJqlncZA=/?focusWidget=3458764648722912923&embedMode=view_only_without_ui&embedId=993351946618" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>"
+        allowfullscreen
+        allow="fullscreen; clipboard-read; clipboard-write"
+      ></iframe>
+    </div>
+  </div>
+</body>
+</html>
